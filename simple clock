@@ -1,0 +1,14 @@
+from tkinter import*
+from tkinter.font import BOLD
+from tkinter.ttk import*
+from time import strftime
+root=Tk()
+root.title("jimbi clock")
+def time():
+    string=strftime("%H:%M:%S %p")
+    label.config(text=string)
+    label.after(1,time)
+label=Label(root,font=("E:/setup/loopy/LOOPY___.ttf",50,BOLD),foreground='black',background='pink')
+label.pack(anchor='center')
+time()
+root.mainloop()
